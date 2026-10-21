@@ -29,5 +29,26 @@ window.QUIZ_DB = [
     storageKey: "business_statistics_mid_2",
     categories: ["경영통계 중간고사"],
     description: "English / 이산확률 & 연속확률"
+  },
+    {
+    file: "경영통계 중간고사 (3).js",
+    title: "경영통계 중간고사 (3)",
+    storageKey: "business_statistics_mid_3",
+    categories: ["경영통계 중간고사"],
+    description: "English / 이산확률 & 연속확률"
+  },
+  {
+    file: "경제원론II 중간고사 (1).js",
+    title: "경제원론II 중간고사 (1)",
+    storageKey: "principle_of_economics_mid_1",
+    categories: ["경제원론II 중간고사"],
+    description: "E거시경제의 기초 · 총수요·총공급 · 장·단기 균형 · 소비와 국민소득 · 화폐와 정책"
+  },
+    {
+    file: "경제원론II 중간고사 (2).js",
+    title: "경제원론II 중간고사 (2)",
+    storageKey: "principle_of_economics_mid_2",
+    categories: ["경제원론II 중간고사"],
+    description: "E거시경제의 기초 · 총수요·총공급 · 장·단기 균형 · 소비와 국민소득 · 화폐와 정책"
   }
 ];
