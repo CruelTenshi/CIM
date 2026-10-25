@@ -25,7 +25,7 @@ window.QUIZ_DB = [
     description: "이산확률 & 연속확률"
   },
   {
-    file: "business_statistics_mid_2.js",
+    file: "경영통계 중간고사 (2).js",
     title: "경영통계 중간고사 (2)",
     storageKey: "business_statistics_mid_2",
     categories: ["경영통계 중간고사"],
