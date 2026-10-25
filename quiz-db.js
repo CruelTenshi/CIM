@@ -1,6 +1,7 @@
+// contentRevision은 선택 사항(기본 1)입니다. storageKey는 파일명을 바꿔도 유지하세요.
 // storageKey는 문제집마다 고유하게 지정하고, 제목/카테고리를 수정해도 유지하세요.
 // categories에 문자열을 추가하면 하나의 문제집이 여러 분류에 표시됩니다.
-// 기존 문제 파일의 meta.storageKey는 수정할 필요가 없습니다.
+// storageKey는 이 파일에서만 지정합니다. 개별 문제 파일의 meta에는 필요하지 않습니다.
 window.QUIZ_DB = [
   {
     file: "투자자산운용사 2과목 문제집 (1).js",
@@ -24,7 +25,7 @@ window.QUIZ_DB = [
     description: "이산확률 & 연속확률"
   },
   {
-    file: "경영통계 중간고사 (2).js",
+    file: "business_statistics_mid_2.js",
     title: "경영통계 중간고사 (2)",
     storageKey: "business_statistics_mid_2",
     categories: ["경영통계 중간고사"],
