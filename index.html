@@ -42,21 +42,24 @@
 <div class="legend">채운 칸: 응답 완료 · 노란 점: 다시 확인<br>테두리: 현재 문항 · 제출 전 정답 비공개</div>
 <div class="sideactions">
 <button class="btn primary wide" id="submitBtn">답안 제출 · 채점</button>
+<button type="button" class="btn wide" id="backupBtn">풀이 백업 · 제출 전에 저장</button>
 <div class="row secondary-actions"><button class="btn subtle" id="resetBtn">전체 초기화</button><button class="btn subtle" id="exportBtn">결과 저장</button></div>
 </div>
 <section class="result-import" aria-labelledby="importHeading">
-<div class="import-heading"><span class="file-label" aria-hidden="true">TXT</span><h3 id="importHeading">저장한 결과 이어보기</h3></div>
-<p class="import-hint" id="importHint">이 문제집에서 저장한 TXT를 선택하면<br>답안과 채점 결과를 다시 불러옵니다.</p>
-<button type="button" class="btn wide import-button" id="importBtn" aria-describedby="importHint"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 16V4m-4 4 4-4 4 4M4 14v6h16v-6"/></svg><span>TXT 결과 불러오기</span></button>
+<div class="import-heading"><span class="file-label" aria-hidden="true">TXT</span><h3 id="importHeading">백업·결과 이어보기</h3></div>
+<p class="import-hint" id="importHint">이 문제집의 풀이 백업 또는 결과 TXT로<br>답안·시간·확인 표시를 다시 불러옵니다.</p>
+<button type="button" class="btn wide import-button" id="importBtn" aria-describedby="importHint"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 16V4m-4 4 4-4 4 4M4 14v6h16v-6"/></svg><span>TXT 백업·결과 불러오기</span></button>
 <input type="file" id="importFile" accept=".txt,text/plain" hidden>
 <p class="import-status" id="importStatus" role="status" aria-live="polite"></p>
 </section>
-<div class="sidefoot" id="saveStatus">이 브라우저에 자동 저장합니다.<br>키보드 1~4: 답 선택 · ← →: 문항 이동<br>시간은 창이 보이는 동안만 누적됩니다.</div>
+<p id="restoreStatus" role="status" aria-live="polite"></p>
+<div class="sidefoot" id="saveStatus" role="status" aria-live="polite">이 브라우저에 자동 저장합니다.<br>키보드 1~4: 답 선택 · ← →: 문항 이동<br>시간은 창이 보이는 동안만 누적됩니다.</div>
 </div></aside>
 <main>
 <section id="summary" aria-label="채점 결과" hidden></section>
 <div id="filters" aria-label="문항 필터"></div>
-<div id="question" aria-live="polite"></div>
+<div id="question"></div>
+<div id="quizStatus" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
 <div id="quizNotes"></div>
 <p class="notice" id="quizNotice"></p>
 </main></div>
