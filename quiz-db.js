@@ -4,16 +4,16 @@
 // storageKey는 이 파일에서만 지정합니다. 개별 문제 파일의 meta에는 필요하지 않습니다.
 window.QUIZ_DB = [
   {
-    file: "투자자산운용사 2과목 문제집 (1).js",
-    title: "투자자산운용사 2과목 문제집 (1)",
-    storageKey: "investment-manager-subject-02-book-01",
+    file: "투자자산운용사 2과목 (1).js",
+    title: "투자자산운용사 2과목 (1)",
+    storageKey: "investment_manager_subject_2_1",
     categories: ["투자자산운용사", "투자자산운용사 2과목"],
     description: "투자운용 및 전략 Ⅱ 및 투자분석 40문제"
   },
   {
-    file: "투자자산운용사 2과목 문제집 (2).js",
-    title: "투자자산운용사 2과목 문제집 (2)",
-    storageKey: "investment-manager-subject-02-book-02",
+    file: "투자자산운용사 2과목 (2).js",
+    title: "투자자산운용사 2과목 (2)",
+    storageKey: "investment_manager_subject_2_2",
     categories: ["투자자산운용사", "투자자산운용사 2과목"],
     description: "투자운용 및 전략 Ⅱ 및 투자분석 60문제"
   },
@@ -21,35 +21,35 @@ window.QUIZ_DB = [
     file: "경영통계 중간고사 (1).js",
     title: "경영통계 중간고사 (1)",
     storageKey: "business_statistics_mid_1",
-    categories: ["경영통계 중간고사"],
-    description: "이산확률 & 연속확률"
+    categories: ["경영통계 중간고사", "경영통계"],
+    description: "개념 정의 · 통계 표시 방법 · 이산확률 · 연속확률 100문제"
   },
   {
     file: "경영통계 중간고사 (2).js",
     title: "경영통계 중간고사 (2)",
     storageKey: "business_statistics_mid_2",
-    categories: ["경영통계 중간고사"],
-    description: "English / 이산확률 & 연속확률"
+    categories: ["경영통계 중간고사", "경영통계"],
+    description: "English / 개념 정의 · 통계 표시 방법 · 이산확률 · 연속확률 25문제"
   },
     {
     file: "경영통계 중간고사 (3).js",
     title: "경영통계 중간고사 (3)",
     storageKey: "business_statistics_mid_3",
-    categories: ["경영통계 중간고사"],
-    description: "English / 이산확률 & 연속확률"
+    categories: ["경영통계 중간고사", "경영통계"],
+    description: "English / 개념 정의 · 통계 표시 방법 · 이산확률 · 연속확률 25문제"
   },
   {
     file: "경제원론II 중간고사 (1).js",
     title: "경제원론II 중간고사 (1)",
-    storageKey: "principle_of_economics_mid_1",
-    categories: ["경제원론II 중간고사"],
-    description: "E거시경제의 기초 · 총수요·총공급 · 장·단기 균형 · 소비와 국민소득 · 화폐와 정책"
+    storageKey: "principles_of_economics_mid_1",
+    categories: ["경제원론II 중간고사", "경제원론II"],
+    description: "거시경제의 기초 · 총수요·총공급 · 장·단기 균형 · 소비와 국민소득 · 화폐와 정책 35문제"
   },
     {
     file: "경제원론II 중간고사 (2).js",
     title: "경제원론II 중간고사 (2)",
-    storageKey: "principle_of_economics_mid_2",
-    categories: ["경제원론II 중간고사"],
-    description: "E거시경제의 기초 · 총수요·총공급 · 장·단기 균형 · 소비와 국민소득 · 화폐와 정책"
+    storageKey: "principles_of_economics_mid_2",
+    categories: ["경제원론II 중간고사", "경제원론II"],
+    description: "거시경제의 기초 · 총수요·총공급 · 장·단기 균형 · 소비와 국민소득 · 화폐와 정책 35문제"
   }
 ];
