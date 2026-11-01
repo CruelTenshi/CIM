@@ -3,22 +3,39 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0b101a">
-<title>문제 풀이</title>
+<meta name="theme-color" content="#050719">
+<meta name="description" content="문제를 풀고 배움을 쌓는 나만의 문제 아카이브. 문제집별 풀이 저장과 오답 복습.">
+<title>문제 아카이브</title>
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./cyber.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.19.0/dist/katex.min.css">
 </head>
-<body>
-<header>
+<body class="quiz-site">
+<header class="site-header">
+<div class="header-inner">
+<a class="brand" href="./index.html" aria-label="문제 아카이브 홈">
+<span class="brand-mark"><img src="brand.svg" alt="" width="38" height="38" aria-hidden="true"></span>
+<span>문제 아카이브<span class="brand-dot">.</span></span>
+</a>
+<span class="header-caption">STUDY COLLECTION</span>
+<span class="header-note"><span class="small-dot"></span> 나만의 학습 기록</span>
+</div>
+</header>
+<section class="collection-intro" aria-labelledby="quizTitle">
+<div class="hero-copy">
 <div class="eyebrow" id="quizEyebrow"></div>
 <h1 id="quizTitle"></h1>
 <p class="sub" id="quizSubtitle"></p>
 <div class="topmeta" id="quizChips"></div>
-</header>
+<div class="hero-caption" aria-hidden="true"><span class="hazard-strip"></span><span>MAKE IT YOUR KNOWLEDGE.</span></div>
+</div>
+<div class="hero-art" aria-hidden="true"><img src="signal.svg" alt="" width="480" height="300"><span class="art-caption">Q / ARCHIVE</span></div>
+</section>
 <section id="dbPicker" class="db-picker" aria-labelledby="dbHeading">
 <div class="db-picker-head">
 <div class="db-picker-intro">
-<h2 id="dbHeading" tabindex="-1">풀 문제집을 선택해주세요.</h2>
+<h2 id="dbHeading" tabindex="-1">나의 문제집</h2>
 <p class="small">문제집을 선택하면 바로 시작합니다. 이전에 풀었다면 저장된 상태를 이어서 엽니다.</p>
 </div>
 <div class="db-toolbar">
@@ -29,7 +46,6 @@
 </div>
 <div id="dbList" class="db-grid"></div>
 <p id="dbStatus" role="status" aria-live="polite"></p>
-<div class="db-help">웹페이지 및 문제는 AI를 통해 제작되었습니다.</div>
 </section>
 <div id="quizView" hidden>
 <div class="backbar"><button type="button" class="btn subtle" id="backToDbs">← 뒤로 가기 · 문제집 선택</button></div>
@@ -64,6 +80,7 @@
 <p class="notice" id="quizNotice"></p>
 </main></div>
 </div>
+<footer class="site-footer"><a class="footer-brand" href="./index.html">문제 아카이브<span>.</span></a><p>웹페이지 및 문제는 AI를 통해 제작되었습니다.</p><span class="save-note"><span class="small-dot"></span> 풀이 기록은 이 브라우저에 저장됩니다.</span></footer>
 <dialog id="modal"><h2 id="modalTitle"></h2><p id="modalBody"></p><div class="row" style="justify-content:flex-end"><button class="btn" id="modalCancel">취소</button><button class="btn primary" id="modalOk">확인</button></div></dialog>
 <div id="toast" role="status" hidden></div>
 <script src="https://cdn.jsdelivr.net/npm/katex@0.19.0/dist/katex.min.js"></script>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300" fill="none">
+  <defs>
+    <linearGradient id="neon" x1="110" y1="20" x2="390" y2="280" gradientUnits="userSpaceOnUse"><stop stop-color="#d40cff"/><stop offset=".5" stop-color="#7955ff"/><stop offset="1" stop-color="#00edf0"/></linearGradient>
+    <pattern id="stripe" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="skewX(-35)"><path fill="url(#neon)" d="M0 0h7v14H0z"/></pattern>
+  </defs>
+  <g stroke="#233b75" stroke-width="1" opacity=".55">
+    <path d="M0 31h91l37 37h45m-173-27h84l37 37h37M17 300v-44l29-29v-77l34-34h62M27 300v-40l29-29v-77l31-28h32M20 0v17h85l27 27h48M32 0v8h77l27 27h32M480 35h-52l-28 28h-41m121-17h-48l-28 28h-25M480 204h-41l-31 31h-53m125-21h-35l-31 31h-44M147 300v-35l24-24m-13 59v-30l22-22M297 0v37m11-37v44M480 111h-38l-17 17M0 181h25l19-19M348 300v-24l19-19"/>
+    <circle cx="173" cy="68" r="4"/><circle cx="180" cy="44" r="4"/><circle cx="359" cy="63" r="4"/><circle cx="355" cy="235" r="4"/><circle cx="142" cy="116" r="4"/><circle cx="171" cy="241" r="4"/><circle cx="297" cy="41" r="4"/>
+  </g>
+  <g stroke="url(#neon)" stroke-linejoin="miter">
+    <path d="M151 74l34-34h101l65 65v101l-34 34H216l-65-65z" stroke-width="2" opacity=".35"/>
+    <path d="M165 85l32-32h82l59 59v82l-32 32h-82l-59-59z" stroke-width="7"/>
+    <path d="M181 92l24-24h65l52 52v65l-25 25h-65l-51-51z" stroke-width="2"/>
+    <path d="M211 105l81 81m-81 0 81-81" stroke-width="14"/>
+    <path d="M137 105V31h68m110 0h45v66m0 100v58h-66m-91 0h-66v-43" stroke-width="7"/>
+    <path d="M124 49v-31h61m152 0h36v50M124 236v32h57m156 0h36v-42" stroke-width="2"/>
+  </g>
+  <path d="M35 61h54v7H35zm0 13h38v3H35zm359 167h51v6h-51z" fill="url(#neon)"/>
+  <path d="M35 242h79v22H35zM383 81h62v16h-62z" fill="url(#stripe)"/>
+  <g stroke="#00e5ee" stroke-width="1.5"><circle cx="49" cy="202" r="10"/><path d="M49 192v20m-10-10h20"/><circle cx="424" cy="142" r="3"/><circle cx="424" cy="155" r="3"/><circle cx="424" cy="168" r="3"/></g>
+  <g fill="#8652ff"><path d="M85 151h6v33h-6zM95 139h3v45h-3zM103 161h4v23h-4zM112 148h2v36h-2z"/><path d="m388 29 7 7-7 7h6l7-7-7-7zm12 0 7 7-7 7h6l7-7-7-7zm12 0 7 7-7 7h6l7-7-7-7z"/></g>
+</svg>

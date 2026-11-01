@@ -30,16 +30,21 @@ function resultFilename(db){
   return name+".txt";
 }
 const el=id=>document.getElementById(id);
+function selectionHeader(){
+  document.body.classList.remove("is-solving");
+  el("quizTitle").classList.add("archive-title");
+  el("quizTitle").innerHTML="QUESTION<span>ARCHIVE<i>_</i></span>";
+  el("quizEyebrow").textContent="02 / 나의 학습 아카이브";
+  el("quizSubtitle").textContent="풀고, 확인하고, 다시 풀기. 나의 지식으로 만드는 문제의 기록.";
+  el("quizChips").replaceChildren();
+  document.title="문제 아카이브";
+}
 function showSelection(){
   if(loadingDb)return;
   if(disposeCurrent){disposeCurrent();disposeCurrent=null;}
   el("quizView").hidden=true;
   el("dbPicker").hidden=false;
-  el("quizTitle").textContent="문제집 선택";
-  el("quizEyebrow").textContent="QUESTION DB / SELECT";
-  el("quizSubtitle").textContent="풀고 싶은 문제 DB를 선택하세요. 풀이 상태는 문제집별로 따로 저장됩니다.";
-  el("quizChips").replaceChildren();
-  document.title="문제집 선택";
+  selectionHeader();
   drawDbs();
   window.scrollTo({top:0,behavior:"instant"});
   el("dbHeading").focus({preventScroll:true});
@@ -77,6 +82,7 @@ function drawDbs(){
     const categories=getCategories(db);
     if(selectedCategory&&!categories.includes(selectedCategory))return;
     const card=document.createElement("article");card.className="db-card";
+    const effects=document.createElement("span");effects.className="card-fx";effects.setAttribute("aria-hidden","true");
     const badges=document.createElement("div");badges.className="db-categories";
     categories.forEach(category=>{
       const badge=document.createElement("span");badge.className="chip";badge.textContent=category;
@@ -87,7 +93,7 @@ function drawDbs(){
     const button=document.createElement("button");button.type="button";button.className="btn primary";
     button.textContent="선택 · 문제 풀기";button.dataset.db=String(index);
     button.onclick=()=>loadDb(db,button);
-    card.append(badges,title,desc,button);el("dbList").appendChild(card);
+    card.append(effects,badges,title,desc,button);el("dbList").appendChild(card);
   });
   const count=el("dbList").children.length;
   el("dbCount").textContent=selectedCategory?`${selectedCategory} · ${count}개 문제집`:`전체 ${count}개 문제집`;
@@ -124,7 +130,7 @@ async function loadDb(db,button){
   }catch(error){
     el("dbStatus").textContent=db.file+"을(를) 불러오지 못했습니다. db 폴더에 해당 파일이 있는지, window.QUIZ_DATA 형식인지 확인하세요. ("+error.message+")";
     el("quizView").hidden=true;el("dbPicker").hidden=false;
-    el("quizTitle").textContent="문제집 선택";document.title="문제집 선택";
+    selectionHeader();
   }finally{
     loadingDb=false;el("categoryFilter").disabled=false;button.textContent=originalLabel;
     el("dbList").querySelectorAll("button").forEach(b=>b.disabled=false);
@@ -305,7 +311,9 @@ for (const q of questions) {
 }
 const questionMap = new Map(questions.map(q => [q.id, q]));
 const fillCount = value => String(value || "").replaceAll("{count}", questions.length);
-document.title = fillCount(meta.documentTitle || meta.title || "문제 풀이");
+document.title = "문제 아카이브 — " + fillCount(meta.documentTitle || meta.title || "문제 풀이");
+document.body.classList.add("is-solving");
+document.getElementById("quizTitle").classList.remove("archive-title");
 document.getElementById("quizTitle").textContent = meta.title || "문제 풀이";
 document.getElementById("quizEyebrow").textContent = meta.eyebrow || "";
 document.getElementById("quizSubtitle").textContent = meta.subtitle || "";
