@@ -4,9 +4,24 @@
 // storageKey는 이 파일에서만 지정합니다. 개별 문제 파일의 meta에는 필요하지 않습니다.
 window.QUIZ_DB = [
   {
+    file: "투자자산운용사 3과목 (2).js",
+    title: "투자자산운용사 3과목 (2)",
+    storageKey: "investment_manager_subject_3_2",
+    categories: ["투자자산운용사", "투자자산운용사 3과목"],
+    description: "직무윤리·법규 · 주식·채권·파생상품 · 성과평가 · 거시경제·분산투자 30문제"
+  },
+  {
+    file: "투자자산운용사 3과목 (3).js",
+    title: "투자자산운용사 3과목 (3)",
+    storageKey: "investment_manager_subject_3_3",
+    categories: ["투자자산운용사", "투자자산운용사 3과목"],
+    description: "직무윤리·법규 · 주식·채권·파생상품 · 성과평가 · 거시경제·분산투자 30문제"
+  },
+  {
     file: "투자자산운용사 3과목 (1).js",
     title: "투자자산운용사 3과목 (1)",
     storageKey: "investment_manager_subject_3_1",
+    contentRevision: 2,
     categories: ["투자자산운용사", "투자자산운용사 3과목"],
     description: "직무윤리·법규 · 주식·채권·파생상품 · 성과평가 · 거시경제·분산투자 60문제"
   },
