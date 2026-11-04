@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="./style.css">
 <link rel="stylesheet" href="./cyber.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.19.0/dist/katex.min.css">
-<link rel="stylesheet" href="hologram.css?v=20261103">
+<link rel="stylesheet" href="hologram.css?v=20261104-layout">
 <script src="hologram.js?v=20261103" defer></script>
 </head>
 <body class="quiz-site">
@@ -38,7 +38,7 @@
 <div class="db-picker-head">
 <div class="db-picker-intro">
 <h2 id="dbHeading" tabindex="-1">나의 문제집</h2>
-<p class="small">문제집을 선택하면 바로 시작합니다. 이전에 풀었다면 저장된 상태를 이어서 엽니다.</p>
+<p class="small">문제집을 골라 새로 풀거나 저장된 풀이를 이어갈 수 있습니다.</p>
 </div>
 <div class="db-toolbar">
 <label for="categoryFilter">분류</label>
@@ -50,7 +50,7 @@
 <p id="dbStatus" role="status" aria-live="polite"></p>
 </section>
 <div id="quizView" hidden>
-<div class="backbar"><button type="button" class="btn subtle" id="backToDbs">← 뒤로 가기 · 문제집 선택</button></div>
+<div class="backbar"><button type="button" class="btn subtle" id="backToDbs">← 문제집 목록</button></div>
 <div class="shell">
 <aside><div class="panel">
 <h2 class="side-title" id="sideTitle">풀이 현황</h2>
@@ -89,5 +89,5 @@
 <script src="https://cdn.jsdelivr.net/npm/katex@0.19.0/dist/contrib/auto-render.min.js"></script>
 
 <script src="./quiz-db.js"></script>
-<script src="./script.js"></script>
+<script src="./script.js?v=20261104-layout"></script>
 </body></html>

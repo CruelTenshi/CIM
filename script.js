@@ -33,9 +33,9 @@ const el=id=>document.getElementById(id);
 function selectionHeader(){
   document.body.classList.remove("is-solving");
   el("quizTitle").classList.add("archive-title");
-  el("quizTitle").innerHTML="QUESTION<span>ARCHIVE<i>_</i></span>";
-  el("quizEyebrow").textContent="02 / 나의 학습 아카이브";
-  el("quizSubtitle").textContent="풀고, 확인하고, 다시 풀기. 나의 지식으로 만드는 문제의 기록.";
+  el("quizTitle").textContent="문제 아카이브";
+  el("quizEyebrow").textContent="QUESTION ARCHIVE";
+  el("quizSubtitle").textContent="과목별 문제를 풀고, 틀린 문항을 다시 확인하세요.";
   el("quizChips").replaceChildren();
   document.title="문제 아카이브";
 }
@@ -91,12 +91,12 @@ function drawDbs(){
     const title=document.createElement("h3");title.textContent=db.title||db.file;
     const desc=document.createElement("p");desc.className="small";desc.textContent=db.description||"선택하면 저장된 풀이 상태를 이어서 엽니다.";
     const button=document.createElement("button");button.type="button";button.className="btn primary";
-    button.textContent="선택 · 문제 풀기";button.dataset.db=String(index);
+    button.textContent="문제 풀기";button.dataset.db=String(index);
     button.onclick=()=>loadDb(db,button);
     card.append(effects,badges,title,desc,button);el("dbList").appendChild(card);
   });
   const count=el("dbList").children.length;
-  el("dbCount").textContent=selectedCategory?`${selectedCategory} · ${count}개 문제집`:`전체 ${count}개 문제집`;
+  el("dbCount").textContent=selectedCategory?`${count}개 문제집`:`전체 ${count}개 문제집`;
   if(!count)el("dbStatus").textContent=total
     ?"선택한 분류에 해당하는 문제집이 없습니다."
     :"등록된 문제집이 없습니다. quiz-db.js에 문제집을 추가하세요.";
