@@ -154,8 +154,34 @@ html[data-motion="paused"] .holo-scene{transform:none}
 .quiz-site .db-categories { padding: 0; margin-bottom: 12px; }
 .quiz-site .chip { border-radius: 4px; }
 .quiz-site .db-card p { margin: 8px 0 16px; }
-.quiz-site .db-card .btn.primary { min-height: 44px; padding: 8px 0 0; }
-.quiz-site .db-card .btn::after { transform: none; text-shadow: none; }
+.quiz-site .db-card .btn.primary {
+  display: inline-flex;
+  justify-content: center;
+  width: auto;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid #38586a;
+  border-radius: 8px;
+  background: #1b3442;
+  color: #e2f2f8;
+  box-shadow: none;
+  font-size: 13px;
+  font-weight: 650;
+  letter-spacing: 0;
+}
+
+.quiz-site .db-card .btn.primary:hover:not(:disabled) {
+  border-color: #638ea4;
+  background: #274958;
+  color: #fff;
+}
+
+.quiz-site .db-card .btn.primary:disabled {
+  opacity: .65;
+  cursor: wait;
+}
+
+.quiz-site .db-card .btn::after { content: none; }
 
 .quiz-site .panel,
 .quiz-site .card,
