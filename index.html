@@ -10,17 +10,18 @@
 <link rel="stylesheet" href="./style.css">
 <link rel="stylesheet" href="./cyber.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.19.0/dist/katex.min.css">
-<link rel="stylesheet" href="hologram.css?v=20261104-button">
+<link rel="stylesheet" href="hologram.css?v=20261105-unified">
 <script src="hologram.js?v=20261103" defer></script>
 </head>
 <body class="quiz-site">
+<a class="skip-link" href="#dbHeading">본문으로 건너뛰기</a>
 <header class="site-header">
 <div class="header-inner">
 <a class="brand" href="./index.html" aria-label="문제 아카이브 홈">
 <span class="brand-mark"><img src="brand.svg" alt="" width="38" height="38" aria-hidden="true"></span>
 <span>문제 아카이브<span class="brand-dot">.</span></span>
 </a>
-<span class="header-caption">STUDY COLLECTION</span>
+<span class="header-caption">PERSONAL PRACTICE</span>
 <span class="header-note"><span class="small-dot"></span> 나만의 학습 기록</span>
 </div>
 </header>
@@ -28,20 +29,24 @@
 <div class="hero-copy">
 <div class="eyebrow" id="quizEyebrow"></div>
 <h1 id="quizTitle"></h1>
-<p class="sub" id="quizSubtitle"></p>
+<p class="sub intro-description" id="quizSubtitle"></p>
 <div class="topmeta" id="quizChips"></div>
 <div class="hero-caption" aria-hidden="true"><span class="hazard-strip"></span><span>MAKE IT YOUR KNOWLEDGE.</span></div>
 </div>
 <div class="hero-art" aria-hidden="true"><svg class="holo-scene" viewBox="0 0 500 330" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="holo-glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8affed" stop-opacity=".15"/><stop offset=".55" stop-color="#3d8ecb" stop-opacity=".04"/><stop offset="1" stop-color="#a58aff" stop-opacity=".17"/></linearGradient><radialGradient id="holo-aura"><stop stop-color="#6ce5da" stop-opacity=".13"/><stop offset="1" stop-color="#6ce5da" stop-opacity="0"/></radialGradient></defs><ellipse cx="250" cy="175" rx="190" ry="145" fill="url(#holo-aura)"/><path class="wire faint" d="M24 65V30H65M435 30h41v35M24 255v35h41M435 290h41v-35M250 20v10M250 290v10M14 160h12M474 160h12"/><text class="label" x="30" y="20">PERSONAL / ARCHIVE SYSTEM</text><text class="label" x="410" y="310">EST. 2026</text><ellipse class="wire faint" cx="250" cy="263" rx="155" ry="35"/><ellipse class="wire holo-trace" cx="250" cy="263" rx="134" ry="26"/><path class="wire faint" d="M250 32v236M135 96v134M365 96v134M100 263h300"/><g class="holo-float-delayed"><path class="glass" d="M250 137 348 188 250 239 152 188Z"/><path class="wire" d="M152 188v13l98 51 98-51v-13M250 239v13"/><path class="wire faint" d="m181 188 69-36 69 36-69 36Z"/><path class="wire" d="m224 185 18 10 35-19"/><circle class="solid" cx="250" cy="239" r="2"/></g><g class="holo-float"><path class="glass" d="M250 93 348 144 250 195 152 144Z"/><path class="wire" d="M152 144v13l98 51 98-51v-13M250 195v13"/><path class="wire faint" d="m181 144 69-36 69 36-69 36Z"/><path class="wire" d="m224 141 18 10 35-19"/><circle class="solid" cx="250" cy="195" r="2"/></g><g class="holo-float-delayed"><path class="glass" d="M250 49 348 100 250 151 152 100Z"/><path class="wire" d="M152 100v13l98 51 98-51v-13M250 151v13"/><path class="wire faint" d="m181 100 69-36 69 36-69 36Z"/><path class="wire" d="m224 97 18 10 35-19"/><circle class="solid" cx="250" cy="151" r="2"/></g><path class="wire" d="M348 100h42l16-17h48M152 203h-35l-15 20H43"/><text class="bright-label" x="377" y="68">PRACTICE</text><text class="label" x="43" y="241">LEARN / RECALL</text><g class="holo-node"><circle class="solid" cx="390" cy="100" r="3"/><circle class="solid" cx="117" cy="203" r="3"/></g><path class="wire violet holo-trace" d="M135 96v134l115 59 115-59V96"/></svg><div class="holo-readout"><span>PRACTICE MODULE</span><span>Q / 02</span></div></div>
 </section>
 <section id="dbPicker" class="db-picker" aria-labelledby="dbHeading">
+<div class="library-bar">
+<span class="library-tab">문제집 모아보기 <span id="libraryCount">0</span></span>
+<span class="personal-label"><span class="small-dot"></span> 차곡차곡 쌓이는 나의 배움</span>
+</div>
 <div class="db-picker-head">
 <div class="db-picker-intro">
-<h2 id="dbHeading" tabindex="-1">나의 문제집</h2>
+<h2 id="dbHeading" tabindex="-1"><svg class="icon" aria-hidden="true"><use href="icons.svg#book"></use></svg>나의 문제집</h2>
 <p class="small">문제집을 골라 새로 풀거나 저장된 풀이를 이어갈 수 있습니다.</p>
 </div>
 <div class="db-toolbar">
-<label for="categoryFilter">분류</label>
+<label for="categoryFilter"><svg class="icon" aria-hidden="true"><use href="icons.svg#filter"></use></svg>분류</label>
 <select id="categoryFilter" aria-controls="dbList"><option value="">전체 카테고리</option></select>
 <span class="small" id="dbCount" role="status" aria-live="polite"></span>
 </div>
@@ -73,7 +78,7 @@
 <p id="restoreStatus" role="status" aria-live="polite"></p>
 <div class="sidefoot" id="saveStatus" role="status" aria-live="polite">이 브라우저에 자동 저장합니다.<br>키보드 1~4: 답 선택 · ← →: 문항 이동<br>시간은 창이 보이는 동안만 누적됩니다.</div>
 </div></aside>
-<main>
+<main id="quizMain" tabindex="-1">
 <section id="summary" aria-label="채점 결과" hidden></section>
 <div id="filters" aria-label="문항 필터"></div>
 <div id="question"></div>
@@ -89,5 +94,7 @@
 <script src="https://cdn.jsdelivr.net/npm/katex@0.19.0/dist/contrib/auto-render.min.js"></script>
 
 <script src="./quiz-db.js"></script>
-<script src="./script.js?v=20261104-layout"></script>
+<script src="./script.js?v=20261105-unified"></script>
 </body></html>
+
+
